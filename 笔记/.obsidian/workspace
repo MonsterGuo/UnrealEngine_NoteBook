@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "39adf989dea03dae",
+    "type": "split",
+    "children": [
+      {
+        "id": "4ead59f9b22149d0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Ansel_Capture说明文档.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7a0e2cadb190eeba",
+    "type": "split",
+    "children": [
+      {
+        "id": "e6fa2042ec204918",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b0b21c3bf9c589c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "4bf7c1ccb568ace7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bfe0177957e319b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "92468e6d498df7a5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d515db47f463ae63",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Ansel_Capture说明文档.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "4ead59f9b22149d0",
+  "lastOpenFiles": [
+    "Ansel_Capture说明文档.md",
+    "SwitchBoard.md",
+    "图片库/Pasted image 20220327220514.png",
+    "图片库/Pasted image 20220327124350.png",
+    "图片库/Pasted image 20220324120645.png"
+  ]
+}

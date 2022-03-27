@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "ef9f8125f6b0b3f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "61367c83fa48d2fe",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "笔记/SwitchBoard.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d86ad798d0c8cc8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "97c4c1035aefbf37",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9589a7bbe1ce473f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "400aa68ec7ca6c5f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b8054b965b0318bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "31d2c74da984fb02",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1682dd3e22c4328b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "笔记/SwitchBoard.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "61367c83fa48d2fe",
+  "lastOpenFiles": [
+    "笔记/SwitchBoard.md",
+    "笔记/Ansel_Capture说明文档.md"
+  ]
+}
