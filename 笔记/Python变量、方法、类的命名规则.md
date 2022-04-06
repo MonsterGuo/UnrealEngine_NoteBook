@@ -1,0 +1,135 @@
+![命名规约](https://img-blog.csdn.net/20180122142356120?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZmVpa29uMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+1. 变量命名总结：
+- 1.单下划线开头变量：protected
+- 2.双下划线开头变量：private
+- 3.双下划线开头，双下划线结尾：系统内置变量
+2. 函数命名总结：
+- 1.私有方法：小写和一个前导下划线
+- 2.特殊方法（魔术方法）：小写和两个前导下划线，两个后置下划线
+- 3.函数参数：小写和下划线，缺省值等号两边无空格
+3. 类名称命名：
+- 类总是使用驼峰格式命名，即所有单词首字母大写其余字母小写。
+
+### 代码示例
+
+```
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+__Title__ = '下划线变量与命名'
+__Author__ = 'Zhangyf'
+__Author_email__ ='hpuyanfeng@126.com'
+__Time__ = '2018/1/22'
+"""
+
+# 变量命名总结：
+# 1.单下划线开头变量：protected
+# 2.双下划线开头变量：private
+# 3.双下划线开头，双下划线结尾：系统内置变量
+
+"""
+    单下划线开头变量
+    _xxx，单下划线开头的变量，标明是一个受保护(protected)的变量，原则上不允许直接访问，但外部类还是可以访问到这个变量。
+    这只是程序员之间的一个约定，用于警告说明这是一个私有变量，外部类不要去访问它。
+    print(stu._name) 当要输入_name时，pycharm不会进行_name的提示
+    print(stu.age) 当要显示age时，pycharm会进行age的提示
+
+
+"""
+
+
+class Student:
+    def __init__(self, name, sex):
+        self._name = name
+        self.sex = sex
+
+
+stu = Student('zyf', 'Male')
+print(stu._name)                # 单下划线protected的变量，原则上不允许直接访问  输出：zyf
+print(stu.sex)                  # age可以直接访问     输出：Male
+
+
+"""
+ 双下划线开头
+ __xxx，双下划线开头的，表示的是私有类型(private)的变量。
+ 只能是允许这个类本身进行访问了, 连子类也不可以.
+ 用于命名一个类属性（类变量）,调用时名字被改变
+（在类Student内部，__name变成_Student__name,如 self._Student__name)
+ 双下划线开头的实例变量是不是一定不能从外部访问呢？其实也不是。仍然可以通过_Student__name来访问__name变量：
+"""
+
+
+class Person:
+    def __init__(self, name):
+        self.__name = name
+
+
+per = Person('zyf2')
+print(per._Person__name)        # 输出zyf2 但是无法直接访问__name
+
+
+"""
+ 双下划线开头，并且以双下划线结尾
+ __xxx__，以双下划线开头，并且以双下划线结尾的，是内置变量.
+ 内置变量是可以直接访问的，不是 private 变量，如__init__，__import__或是__file__。
+ ★不要自己定义这类变量
+ xxx_，单下划线结尾的变量一般只是为了避免与 Python 关键字的命名冲突
+ USER_CONSTANT，大写加下划线，对于不会发生改变的全局变量，使用大写加下划线
+"""
+
+
+# 函数命名总结：
+# 1.私有方法：小写和一个前导下划线
+# 2.特殊方法（魔术方法）：小写和两个前导下划线，两个后置下划线
+# 3.函数参数：小写和下划线，缺省值等号两边无空格
+
+"""
+函数
+总体而言应该使用，小写和下划线
+
+私有方法 ： 小写和一个前导下划线
+这里和私有变量一样，并不是真正的私有访问权限。
+同时也应该注意一般函数不要使用两个前导下划线(当遇到两个前导下划线时，Python 的名称改编特性将发挥作用)。特殊函数后面会提及。
+
+
+#特殊方法 ： 小写和两个前导下划线，两个后置下划线
+#这种风格只应用于特殊函数，比如操作符重载等。
+
+
+#函数参数 : 小写和下划线，缺省值等号两边无空格
+
+
+"""
+
+
+# 私有方法
+class PrivateCase:
+    @staticmethod
+    def _secrete():
+        print(r"Don't test me")
+
+
+priC = PrivateCase()
+priC._secrete()         # _secrete为protected member
+
+
+# 特殊方法（魔术方法）
+def __add__(self, other):
+    return int.__add__(other)
+
+
+# 函数参数
+def connect(self, user=None):
+    self._user = user
+
+
+"""
+ ★类名称命名：
+ 类总是使用驼峰格式命名，即所有单词首字母大写其余字母小写。
+ 类名应该简明，精确，并足以从中理解类所完成的工作。
+ 常见的一个方法是使用表示其类型或者特性的后缀，例如:SQLEngine ，MimeTypes
+ 对于基类而言，可以使用一个 Base 或者 Abstract 前缀
+ 不要滥用 *args 和 **kwargs，可能会破坏函数的健壮性
+"""
+```
