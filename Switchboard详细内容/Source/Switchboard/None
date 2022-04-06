@@ -1,0 +1,83 @@
+{
+    "project_name": "Default",
+    "uproject": "",
+    "engine_dir": "",
+    "build_engine": false,
+    "maps_path": "",
+    "maps_filter": "*.umap",
+    "listener_exe": "SwitchboardListener",
+    "osc_server_port": 6000,
+    "osc_client_port": 8000,
+    "p4_enabled": false,
+    "p4_sync_path": "",
+    "p4_engine_path": "",
+    "source_control_workspace": null,
+    "multiuser_exe": "UnrealMultiUserServer",
+    "muserver_command_line_arguments": "",
+    "muserver_server_name": "Default_MU_Server",
+    "muserver_auto_launch": true,
+    "muserver_auto_join": false,
+    "muserver_clean_history": true,
+    "muserver_auto_build": true,
+    "current_level": "-- Default Map --",
+    "devices": {
+        "KiPro": {
+            "settings": {
+                "is_recording_device": true
+            }
+        },
+        "LiveLinkFace": {
+            "settings": {
+                "is_recording_device": true
+            }
+        },
+        "Motive": {
+            "settings": {
+                "is_recording_device": true,
+                "motive_port": 1510
+            }
+        },
+        "Unreal": {
+            "settings": {
+                "is_recording_device": true,
+                "buffer_size": 1024,
+                "command_line_arguments": "",
+                "exec_cmds": "",
+                "dp_cvars": "",
+                "port": 2980,
+                "roles_filename": "VPRoles.ini",
+                "stage_session_id": 0,
+                "editor_exe": "UE4Editor.exe",
+                "max_gpu_count": 1,
+                "priority_modifier": "Normal"
+            }
+        },
+        "nDisplay": {
+            "settings": {
+                "ndisplay_cfg_file": "",
+                "use_all_available_cores": false,
+                "texture_streaming": true,
+                "render_api": "dx12",
+                "render_mode": "Mono",
+                "ndisplay_cmd_args": "",
+                "ndisplay_exec_cmds": "",
+                "ndisplay_dp_cvars": "",
+                "max_gpu_count": 1,
+                "priority_modifier": "Normal",
+                "port": 2980,
+                "roles_filename": "VPRoles.ini",
+                "stage_session_id": 0
+            }
+        },
+        "Shogun": {
+            "settings": {
+                "is_recording_device": true
+            }
+        },
+        "SoundDevices": {
+            "settings": {
+                "is_recording_device": true
+            }
+        }
+    }
+}

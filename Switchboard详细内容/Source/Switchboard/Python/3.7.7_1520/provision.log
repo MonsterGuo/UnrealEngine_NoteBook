@@ -1,0 +1,41 @@
+
+- rd /q /s "D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520"  2>nul 
+
+- if exist "D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520" call:on_error "Unable to remove directory 'D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520'" 
+
+- if not 0 == 0 (
+echo ERROR: Unable to remove directory 'D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520'  
+ (
+echo ERROR: Unable to remove directory 'D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520'  
+ timeout /T 5 
+) 1>con  
+ exit 1 
+) 1>&2 
+
+- goto:eof
+
+- md "D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520" 
+子目录或文件 D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520 已经存在。
+
+- pushd "D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520" 
+
+- call:echo "Working path; D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520" 
+
+- echo Working path; D:\Ndisplay\Plugins\Switchboard\Source\Switchboard\Python\3.7.7_1520 1>con 
+
+- goto:eof
+
+- call:echo "1/6 : Getting Python 3.7.7" 
+
+- echo 1/6 : Getting Python 3.7.7 1>con 
+
+- goto:eof
+
+- call:get_url https://www.python.org/ftp/python/3.7.7/python-3.7.7-embed-amd64.zip 
+
+- call:powershell     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;     (New-Object System.Net.WebClient).DownloadFile("https://www.python.org/ftp/python/3.7.7/python-3.7.7-embed-amd64.zip", "python-3.7.7-embed-amd64.zip") 
+
+- set _psscript=[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;     (New-Object System.Net.WebClient).DownloadFile("https://www.python.org/ftp/python/3.7.7/python-3.7.7-embed-amd64.zip", "python-3.7.7-embed-amd64.zip") 
+
+- powershell.exe -NoProfile -NoLogo -Command [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;     (New-Object System.Net.WebClient).DownloadFile(\"https://www.python.org/ftp/python/3.7.7/python-3.7.7-embed-amd64.zip\", \"python-3.7.7-embed-amd64.zip\") 
+^C
