@@ -1,0 +1,236 @@
+该存储库包含内存管理的操作系统(如Linux/Posix和Windows)上的Eclipse Paho MQTT c++客户端库的源代码。
+
+这段代码构建了一个库，该库==允许c++ 11应用程序==连接到MQTT代理、向代理发布消息、订阅主题和接收发布的消息。
+
+该库具有以下功能:
+- 支持MQTT v3.1, v3.1.1, 和v5.
+- 网络传输协议
+	- 标准TCP
+	- 使用SSL/TLS的安全套接字（也就是支持这种保密协议）
+	- WebSockets
+		- 安全和不安全
+		- 代理支持
+- Message persistence（消息持续）
+	- 用户可配置
+	- 内置文件持久性
+	- 用户定义的键/值持久性易于实现
+- 自动重新连接
+- 离线缓冲
+- 高可用性
+- 阻塞和非阻塞API
+- 现代C++接口（C++11 或者更高）
+
+这段代码需要伊恩·克莱格斯等人的Paho C库，特别是版本1.3.8或更高版本。
+
+### 最新消息：
+了解该项目的最新公告，或提出问题:
+**Twitter:** [@eclipsepaho](https://twitter.com/eclipsepaho) and [@fmpagliughi](https://twitter.com/fmpagliughi)
+**EMail:** [Eclipse Paho Mailing List](https://accounts.eclipse.org/mailing-list/paho-dev)
+**Mattermost:** [Eclipse Mattermost Paho Channel](https://mattermost.eclipse.org/eclipse/channels/paho)
+
+#### 该分支中未发布的特性
+- 在v5聊天示例中添加了会话到期间隔
+- 为C++20做准备的小调整
+- 只使用len而不是end迭代器对tests #317字符串构造函数进行了少量清理。#337复制和移动构造函数ssl _ options的赋值不处理CA路径。
+
+
+### 在新的1.2.0版本中有哪些新的
+这个版本引入了一些缺失的MQTT v5特性，对websocket头和代理、ALPN协议列表的支持，为选项添加了构建器模式，并修复了C++库和底层C lib中的一些错误。
+
+需要Paho C v1.3.8
+- 缺少MQTT v5特性:
+	- 能够添加订阅和取消订阅数据包的属性(即订阅标识符)
+	- “断开连接”回调提供了服务器断开连接的原因代码和属性
+- 新的create_options可用于构建具有新功能的客户端
+	- 在第一次成功连接前断开连接时发送
+	- 输出缓冲区满时可以删除最旧的消息
+	- 可以选择在启动时清除持久性存储
+	- 选择是否保留QoS 0消息
+- 启动了使用构建器模式创建选项的类，包括create_options_builder、connect_options_builder、message_ptr_builder等。
+- 用户定义的websocket HTTP头。
+- HTTP/S代理支持
+- 向SSL/TLS选项添加了ALPN协议支持
+- SSL/TLS错误和PSK回调支持
+- 更新连接回调支持(使用自动重新连接时更改凭据)
+- 示例应用程序的更新:
+	- 一致性更好的整体清理
+	- 使用websockets和代理的示例
+	- 基于用户的文件持久性，具有简单的编码/加密
+	- 在多个线程之间共享一个客户端
+- 已将单元测试转换为使用Catch2
+- 所有库异常现在都正确地从mqtt::exception基类派生出来。
+- [#231]添加了on_disconnected回调来处理从服务器接收到的断开数据包。
+- [#211、#223、#235]从Paho C库中删除了Log()函数的使用。
+- [#227]修复了线程安全队列中的竞争情况
+- [#224] & [#255]订阅带有一个主题数组的MQTT v3代理会导致segfault。
+- [#282]构建Debian/Ubuntu包的能力
+- [#300]调用reconnect()永远挂起，即使成功也是如此。此外，有几个同步客户端调用因失败而永远挂起。他们现在正确地抛出一个超时错误异常。
+- 来自更新的Paho C库支持的几个内存问题和错误修复。
+-
+
+###  _Catch2_ 单元测试
+单元测试被转换为使用Catch2作为测试框架。
+Catch2可以在这里找到:Catch2
+
+##  Building from source 从源码构建
+CMake是一个==跨平台构建系统==，适用于Unix和非Unix平台，如Microsoft Windows。它现在是唯一受支持的构建系统。
+
+Paho C++库要求首先==构建并安装Paho C库1.3.8版或更高版本==。更多信息如下。
+CMake允许指导构建的选项。以下是针对Paho C++的:
+| 值 | 默认值 | 描述 |
+| -- | ------- |-----|
+| PAHO_BUILD_SHARED |  TRUE (Linux), FALSE (Win32) | 是否建立共享库 |
+| PAHO_BUILD_STATIC | FALSE (Linux), TRUE (Win32) | 是否构建静态库 |
+| PAHO_BUILD_DOCUMENTATION |  FALSE | 创建并安装基于HTML的API文档(需要Doxygen) |
+| PAHO_BUILD_SAMPLES | FALSE |  构建示例程序 |
+| PAHO_BUILD_TESTS | FALSE | 构建单元测试。(这需要Catch2) |
+| PAHO_WITH_SSL |   TRUE (Linux), FALSE (Win32) | 标志，它也定义是否构建支持ssl的二进制文件 |
+| PAHO_BUILD_DEB_PACKAGE | FALSE | 配置cpack来构建Debian/Ubuntu包的标志 |
+
+此外，c++构建通常会使用CMAKE_PREFIX_PATH来帮助构建系统找到Paho C库的位置。
+
+# Windows 平台构建
+在Windows系统上，CMake创建Visual Studio项目文件。
+构建过程目前支持多个Windows版本。构建过程需要以下工具:
+-  CMake GUI v3.5或者更新
+- Visual Studio 2015 或者更新
+
+#### 第一步：
+> 首先安装并打开cmake-gui应用程序。本教程基于cmake-gui 3.5.2。
+
+#### 第二步
+其次，如果没有安装在标准路径中，则选择Paho MQTT C库的路径(CMAKE_PREFIX_PATH)。请记住，必须在系统上安装Paho MQTT C。
+接下来，选择是否构建文档(PAHO_BUILD_DOCUMENTATION)和/或示例应用程序(PAHO_BUILD_SAMPLES)。
+#### 第三步
+配置完成后，单击Configure按钮，选择Visual Studio的版本，然后单击Generate按钮。
+==在这个过程的最后，您得到了一个Visual Studio解决方案。==
+
+#### 用另外的方式构建
+另外，库也可以在MSBuild命令提示符下完全构建。
+(1) 下载Paho C和c++库源代码，然后打开命令窗口，首先编译Paho C库:
+
+```
+> cd paho.mqtt.c
+> cmake -Bbuild -H. -DCMAKE_INSTALL_PREFIX=C:\mqtt\paho-c
+> cmake --build build/ --target install
+```
+
+(2) 然后构建C++库
+
+```
+> cd ..\paho.mqtt.cpp
+> cmake -Bbuild -H. -DCMAKE_INSTALL_PREFIX=C:\mqtt\paho-cpp -DPAHO_BUILD_SAMPLES=ON -DPAHO_WITH_SSL=OFF -DCMAKE_PREFIX_PATH=C:\mqtt\paho-c
+> cmake --build build/ --target install
+```
+
+这将构建并安装两个库到C:\mqtt下的非标准位置。根据需要修改这个位置或使用默认位置，但是无论哪种方式，c++库都很可能需要被告知C库是在哪里使用CMAKE_PREFIX_PATH构建的。
+
+这看起来很奇怪，但即使在使用64位编译器的64位系统上，MSVC似乎也默认为32位构建目标。
+
+64位目标可以在配置时使用tge CMake生成器开关-G来选择。必须提供完整版本。对于Visual Studio 2015 (v14)，首先要构建Paho C库:
+
+```
+> cmake -G "Visual Studio 14 Win64" -Bbuild -H. -DCMAKE_INSTALL_PREFIX=C:\mqtt\paho-c
+...
+```
+
+然后使用它来构建c++库:
+
+```
+> cmake -G "Visual Studio 14 Win64" -Bbuild -H. -DCMAKE_INSTALL_PREFIX=C:\mqtt\paho-cpp -DPAHO_WITH_SSL=OFF -DCMAKE_PREFIX_PATH=C:\mqtt\paho-c
+...
+```
+
+请注意，使用相同的生成器(目标)来构建这两个库是非常重要的，否则，当你尝试构建c++库时，你会得到很多链接器错误。
+
+# 支持的网络协议
+库支持使用==TCP、SSL/TLS和websockets(安全的和不安全的)==连接到MQTT服务器/代理。这是由提供给connect()调用的URI选择的。可以指定为:
+
+```
+"tcp://<host>:<port>"  - TCP (unsecure)
+"ssl://<host>:<port>"  - SSL/TLS
+"ws://<host>:<port>"   - Unsecure websockets
+"wss://<host>:<port>"  - Secure websockets
+```
+
+>请注意，要使用"ssl://"或"wss://"， 必须使用OpenSSL编译库，并且必须使用connect_options提供一组ssl_options。
+
+# 示例
+在源代码库src/samples中可以找到示例应用程序:
+网站演示例子：
+[https://github.com/eclipse/paho.mqtt.cpp/tree/master/src/samples](https://github.com/eclipse/paho.mqtt.cpp/tree/master/src/samples)
+
+下面是一个典型例子的部分例子:
+```
+int main(int argc, char* argv[])
+{
+	// 示例_内存_持久性 持久性
+    sample_mem_persistence persist;
+    //mqtt客户端 cli（地址，客户端ID， 持续性存储）
+    mqtt::client cli(ADDRESS, CLIENT_ID, &persist);
+	// 回调
+    callback cb;
+    // 客户端cil设置回调（cb）
+    cli.set_callback(cb);
+	// 连接选项 =  mqtt连接_选项_构建器（）保持激活间隔（20），清除会话（）.完成（）
+    auto connOpts = mqtt::connect_options_builder() 
+        .keep_alive_interval(20);
+        .clean_session()
+        .finalize();
+	//尝试
+    try {
+	    //cil客户端连接
+        cli.connect(connOpts);
+        
+		// 第一个使用 一个消息指针
+        // First use a message pointer.
+        
+		// mqtt的消息指针 pubmsg = mqtt::创建消息（PAYLOAD1）
+        mqtt::message_ptr pubmsg = mqtt::make_message(PAYLOAD1);
+        
+        // pubmsg 推送的消息 设置 服务质量等级（QOS）
+        pubmsg->set_qos(QOS);
+        
+        // cli客户端.发布消息（主题，pub消息）
+        cli.publish(TOPIC, pubmsg);
+        
+		//现在尝试逐项发布。
+        // Now try with itemized publish.
+        cli.publish(TOPIC, PAYLOAD2, strlen(PAYLOAD2)+1, 0, false);
+        
+		// 断开连接
+        // Disconnect
+        cli.disconnect();
+    }
+    // 捕获（常量 mqtt:: 持久内存_执行& exc）{
+    // 错误<< 持久错误： “exc执行的什么”<< [执行器返回的原因代码]<<换行}
+    catch (const mqtt::persistence_exception& exc) {
+        cerr << "Persistence Error: " << exc.what() << " ["
+            << exc.get_reason_code() << "]" << endl;
+        return 1;
+    }
+    // 捕获（常量 mqtt::执行& exc）{
+    // 错误<< 持久错误： “exc执行的什么”<< [执行器返回的原因代码]<<换行}
+    catch (const mqtt::exception& exc) {
+        cerr << "Error: " << exc.what() << " ["
+            << exc.get_reason_code() << "]" << endl;
+        return 1;
+    }
+
+    return 0;
+}
+```
+
+最初的API组织和文档改编自：
+Dave Locke等人的PAHO Java库。
+版权所有(C)2012，IBM公司
+
+版权所有。
+本程序和附带的资料是根据本发行版附带的Eclipse Public License v1.0的条款提供的，并可在http://www.eclipse.org/legal/epl-v10.html上获得
+
+### 这段代码需要:
+版权所有(C) 2013-2018, IBM公司。
+
+保留所有权利。本程序和附带的材料是根据本发行版附带的Eclipse Public License v1.0和Eclipse Distribution License v1.0条款提供的。
+
+Eclipse公共许可证可在http://www.eclipse.org/legal/epl-v10.html获得，Eclipse分发许可证可在http://www.eclipse.org/org/documents/edl-v10.php获得。
