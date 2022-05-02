@@ -1,4 +1,8 @@
 {
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "promptDelete": false,
+  "readableLineLength": true,
+  "attachmentFolderPath": "C++程序DLL相关基础/Image",
+  "alwaysUpdateLinks": true
 }

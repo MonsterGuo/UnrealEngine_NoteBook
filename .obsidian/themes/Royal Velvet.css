@@ -1,0 +1,611 @@
+/*───────────────────────────────────────────────────────
+Royal Velvet
+Version 0.9.7
+Created by @caro401
+Readme:
+https://github.com/caro401/royal-velvet
+----------------------------------------------------------------
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+────────────────────────────────────────────────────── */
+
+/*Fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --default-font: "Fira Sans", "Inter", sans-serif; /*Note and Settings Text*/
+  --font-monospace: "Fira Code", "Source Code Pro", monospace; /*Code block text*/
+
+  --black: #21222c;
+  --blackSecondary: #414558;
+  --blackDark: #1d1e26;
+  --blackXDark: #14141b;
+  --blackLighter: #2a2c37;
+  --white: #f8f8f2;
+  --white-600: rgba(248, 248, 242, 0.6);
+  --white-400: rgba(248, 248, 242, 0.4);
+  --gradientDegree: 135deg;
+}
+
+body {
+  --font-monospace-theme: "Fira Code", "Source Code Pro", monospace; /*Code block text*/
+}
+
+/*Dark Theme Variables*/
+.theme-dark {
+  --pink: #ff80bf;
+  --pinkSecondary: #ffcce6;
+  --pink-100: rgba(255, 128, 191, 0.1);
+  --pink-300: rgba(255, 128, 191, 0.3);
+  --pink-400: rgba(255, 128, 191, 0.4);
+
+  --green: #8aff80;
+  --greenSecondary: #d0ffcc;
+  --green-200: rgba(138, 255, 128, 0.2);
+
+  --orange: #ffca80;
+  --orangeSecondary: #ffeacc;
+  --orange-100: rgba(255, 202, 128, 0.1);
+
+  --purple: #9580ff;
+  --purple-200: rgba(149, 128, 255, 0.2);
+
+  --red: #ff9580;
+  --red-900: rgba(255, 149, 128, 0.9);
+
+  --yellow: #ffff80;
+  --yellow-100: rgba(255, 255, 128, 0.1);
+  --yellow-700: rgba(255, 255, 128, 0.7);
+
+  --cyan: rgb(128, 255, 234);
+  --cyan-600: rgba(128, 255, 234, 0.6);
+
+  --background-modifier-cover: var(--blackXDark); /*Obsidian Title Bar Bg*/
+  --background-primary: var(--black); /*Note background*/
+  --background-primary-alt: var(--blackDark); /*Note Title background active*/
+  --background-secondary: var(--blackDark); /*Sidebar background*/
+  --background-secondary-alt: var(--blackXDark); /*Sidebar Title background*/
+
+  --background-modifier-border: var(
+    --blackDark
+  ); /*Border outline of quotes, tables, line breaks*/
+  --background-modifier-form-field: var(--pink-100);
+  --background-modifier-form-field-highlighted: var(--pink-300);
+  --background-modifier-box-shadow: var(--blackLighter);
+  --background-modifier-success: var(--green-200);
+  --background-modifier-error: var(--red-900);
+  --background-modifier-error-rgb: 61, 0, 0;
+  --background-modifier-error-hover: var(--red);
+
+  --text-normal: var(--white); /*Text body of note*/
+  --text-muted: var(
+    --white-600
+  ); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+  --text-accent: var(--pink); /*Links*/
+  --text-accent-hover: var(--pinkSecondary); /*Links hover*/
+  --text-faint: var(--white-600); /*Link brackets color & Gutter Numbers*/
+  --text-error: var(--red);
+  --text-error-hover: var(--redSecondary);
+
+  --text-highlight-bg: var(--yellow-100); /*Search Matches*/
+  --text-highlight-bg-active: var(
+    --orange-100
+  ); /*Active Search Match (Preview Mode)*/
+  --text-selection: var(--purple-200); /*Text Selections*/
+
+  --interactive-normal: var(--blackDark); /*Button Color*/
+  --interactive-hover: var(--blackXDark); /*Button Hovered Color*/
+  --interactive-accent: var(--pink); /*Workspace Note Title Underline*/
+  --interactive-accent-hover: var(--pinkSecondary); /*Menu Button Hover*/
+  --interactive-success: var(--green);
+
+  --scrollbar-bg: var(--black); /*Scrollbar Gutter Background*/
+  --scrollbar-thumb-bg: var(--pink-100); /*Scrollbar Color*/
+  --scrollbar-active-thumb-bg: var(--pink-300); /*Scrollbar Dragged Color*/
+  --indentation-guide: var(--blackSecondary);
+}
+
+/*Setting Dropdown*/
+.dropdown {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23F8F8F2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  font-family: var(--default-font);
+}
+
+.menu-item-icon {
+  color: var(--cyan-600);
+}
+
+/*--File Explorer--*/
+.nav-folder-title-content {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--pink) 0,
+    var(--orange) 100%
+  );
+  font-weight: 700;
+}
+
+.collapse-icon:hover {
+  color: var(--pink);
+}
+
+.nav-file-title.is-active {
+  background-color: var(--yellow-100);
+  color: var(--yellow);
+  font-weight: bolder;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background-color: var(--yellow-100);
+  color: var(--yellow);
+}
+
+.nav-folder-title:hover .nav-folder-collapse-indicator {
+  color: var(--pink);
+}
+.nav-file-title {
+  line-height: 100%;
+}
+
+/*Status Bar*/
+.status-bar {
+  background-color: var(--blackXDark);
+  border-top: unset;
+  padding-top: 4px;
+  max-height: 28px;
+}
+
+/*--Workspace: Notes--*/
+/*Note Title Bar*/
+.workspace-leaf .view-header {
+  border-bottom: 5px solid var(--black);
+}
+
+.view-header-title {
+  color: var(--pinkSecondary);
+}
+
+.workspace-split.mod-root
+  > .workspace-leaf:first-of-type:last-of-type
+  .view-header,
+.view-header {
+  border-bottom: 5px solid var(--black);
+}
+/*Active Note Titlebar*/
+/*Note Title Bar: Text*/
+.workspace-leaf.mod-active .view-header-title {
+  color: var(--pink);
+}
+
+/*--Emphasis--*/
+strong,
+.cm-s-obsidian .cm-strong,
+.cm-s-obsidian .cm-quote.cm-strong {
+  color: var(--pink);
+}
+
+em,
+.cm-s-obsidian .cm-em,
+.cm-s-obsidian .cm-quote.cm-em {
+  color: var(--cyan);
+}
+
+/*Highlight*/
+.markdown-preview-view mark,
+.cm-s-obsidian .cm-highlight,
+.cm-s-obsidian .cm-highlight.cm-quote,
+.cm-s-obsidian .cm-formatting-highlight {
+  color: var(--yellow);
+  font-weight: 500;
+}
+
+.cm-strikethrough,
+del {
+  color: var(--white-400);
+}
+
+/*--Headers/Headings--*/
+
+h1,
+.cm-header-1 {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--pink) 0,
+    var(--orange) 100%
+  );
+} /*Source Mode*/
+h2,
+.cm-header-2 {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--orange) 0,
+    var(--yellow) 100%
+  );
+} /*Source Mode*/
+h3,
+.cm-header-3 {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--yellow) 0,
+    var(--green) 100%
+  );
+} /*Source Mode*/
+h4,
+.cm-header-4 {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--green) 0,
+    var(--cyan) 100%
+  );
+} /*Source Mode*/
+h5,
+.cm-header-5 {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--cyan) 0,
+    var(--purple) 100%
+  );
+} /*Source Mode*/
+h6,
+.cm-header-6 {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--purple) 0,
+    var(--pink) 100%
+  );
+} /*Source Mode*/
+
+/*--Horizontal Line--*/
+hr,
+.hr.cm-line,
+.HyperMD-hr-bg {
+  border-color: var(--orange);
+}
+
+/*HR Line Text*/
+.cm-s-obsidian pre.HyperMD-hr {
+  color: var(--orange);
+}
+
+/*--Code--*/
+code,
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-quote.cm-inline-code,
+.markdown-preview-view code {
+  color: var(--cyan);
+  font-size: 100%;
+}
+
+.markdown-preview-view pre,
+.cm-s-obsidian .HyperMD-codeblock {
+  padding-left: 2ch;
+}
+
+.code-block-flair,
+.markdown-source-view.mod-cm6 .code-block-flair {
+  color: var(--orange);
+  padding-top: 1ch;
+}
+
+.cm-s-obsidian .HyperMD-codeblock-begin,
+.cm-s-obsidian .HyperMD-codeblock-end {
+  color: var(--cyan);
+}
+
+.markdown-rendered code {
+  background-color: unset;
+}
+
+/*--inline code in headings--*/
+.markdown-preview-view h1 code,
+.markdown-preview-view h2 code,
+.markdown-preview-view h3 code,
+.markdown-preview-view h4 code,
+.markdown-preview-view h5 code,
+.markdown-preview-view h6 code {
+  background-color: unset;
+}
+
+/*--Links--*/
+.cm-s-obsidian span.cm-hmd-internal-link,
+.cm-s-obsidian span.cm-quote.cm-hmd-internal-link,
+a.internal-link {
+  color: var(--orange);
+}
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+a.internal-link:hover {
+  color: var(--orangeSecondary);
+}
+
+.is-unresolved,
+span.is-unresolved > span.cm-hmd-internal-link,
+.markdown-source-view.mod-cm6 .is-unresolved,
+.markdown-preview-view .internal-link.is-unresolved,
+span.is-unresolved,
+a.internal-link.is-unresolved {
+  opacity: 1;
+  color: var(--yellow-700) !important;
+}
+
+a.external-link,
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-link.cm-quote {
+  color: var(--green);
+}
+.external-link:hover,
+.cm-s-obsidian span.cm-link:hover {
+  color: var(--greenSecondary);
+}
+
+/*--Lists--*/
+.markdown-preview-view .task-list-item-checkbox:checked,
+input[type="checkbox"]:checked {
+  filter: hue-rotate(36deg) brightness(1.5);
+}
+/*--Blockquotes--*/
+blockquote,
+.markdown-preview-view blockquote {
+  border: 1px solid;
+  border-left-width: 4px;
+  border-radius: 4px;
+  border-color: var(--purple);
+  background-color: var(--blackDark);
+  padding: 10px 20px;
+  margin-inline-start: 30px;
+  margin-inline-end: 30px;
+}
+
+/* Just left border with no rounding in live preview
+ because there's no parent element for the whole quote */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  background-color: var(--blackDark);
+  padding: 10px 20px;
+  margin-inline-start: 30px;
+  margin-inline-end: 30px;
+  border-left: 4px solid var(--purple);
+}
+.cm-s-obsidian span.cm-quote {
+  color: var(--text-normal);
+}
+
+cite {
+  width: 100%;
+  text-align: right;
+  display: block;
+  color: var(--yellow);
+}
+
+/*--Tables--*/
+table {
+  outline: 3px solid var(--blackDark);
+  outline-offset: -2px;
+}
+
+thead {
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--purple) 0,
+    var(--pink) 100%
+  );
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--blackDark);
+}
+tbody tr:nth-child(even) {
+  background-color: var(--black);
+}
+
+.markdown-preview-view th,
+.markdown-preview-view td {
+  padding-top: 1ch;
+  padding-bottom: 1ch;
+  border: unset;
+  text-align: left;
+}
+
+/*--Tags--*/
+a.tag,
+.cm-s-obsidian span.cm-hashtag {
+  color: var(--pink);
+}
+
+/*--Frontmatter/Metadata/Yaml--*/
+.frontmatter-container,
+.cm-s-obsidian .cm-hmd-frontmatter {
+  font-size: small;
+  line-height: 100%;
+}
+
+.frontmatter-container .tag {
+  border-color: var(--pink);
+}
+
+.frontmatter-container .tag:hover {
+  border-color: var(--pinkSecondary);
+}
+
+/*--Footnotes--*/
+section.footnotes > hr {
+  border-color: var(--text-muted);
+}
+
+section.footnotes li,
+.cm-s-obsidian .HyperMD-footnote {
+  color: var(--text-muted);
+  font-size: smaller;
+}
+
+.footnote-backref {
+  color: var(--pink-400);
+}
+
+/*--Graph--*/
+
+.theme-dark .graph-view.color-fill-tag {
+  color: var(--orange);
+}
+
+.theme-dark .graph-view.color-fill-attachment {
+  color: var(--green);
+}
+
+.graph-view.color-arrow,
+.graph-view.color-line {
+  color: var(--blackSecondary);
+}
+
+.graph-view.color-text {
+  color: var(--white);
+}
+
+.graph-view.color-circle {
+  color: var(--cyan);
+}
+
+.graph-view.color-fill-focused {
+  color: var(--purple);
+}
+
+/* Other */
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  border: 1px solid var(--pink);
+}
+
+input[type="range"] {
+  background-color: var(--text-faint);
+}
+
+.workspace-leaf-resize-handle:hover {
+  background-color: var(--blackSecondary);
+}
+
+img,
+.markdown-source-view.mod-cm6 .cm-content > img {
+  margin: 1ch;
+}
+
+/* Don't put margin around icon folder emoji icons */
+div.obsidian-icon-folder-icon > img {
+  margin: 0;
+}
+
+button.mod-cta,
+button.mod-muted,
+button.mod-warning {
+  font-family: var(--default-font);
+}
+
+/* Code highlighting theme */
+
+.theme-dark .token.keyword,
+.theme-dark .cm-keyword,
+.theme-dark .cm-builtin,
+.theme-dark .token.operator,
+.theme-dark .cm-operator {
+  color: var(--pink);
+}
+
+.theme-dark .token.atrule,
+.theme-dark .token.attr-value,
+.theme-dark .token.function,
+.theme-dark .cm-attribute,
+.theme-dark .cm-type,
+.theme-dark .cm-def,
+.theme-dark .cm-variable {
+  color: var(--green);
+}
+
+.theme-dark .token.parameter {
+  color: var(--orange);
+}
+
+.theme-dark .token.class-name {
+  color: var(--purple);
+}
+
+.theme-dark .token.string,
+.theme-dark .cm-string {
+  color: var(--yellow);
+}
+
+/* Nested bullets are different colours */
+ul li::marker,
+ol li::marker,
+.HyperMD-list-line-1 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-1 .cm-formatting-list {
+  color: var(--pink);
+}
+ul ul li::marker,
+ol ol li::marker,
+.HyperMD-list-line-2 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-2 .cm-formatting-list {
+  color: var(--orange);
+}
+ul ul ul li::marker,
+ol ol ol li::marker,
+.HyperMD-list-line-3 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-3 .cm-formatting-list {
+  color: var(--yellow);
+}
+ul ul ul ul li::marker,
+ol ol ol ol li::marker,
+.HyperMD-list-line-4 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-4 .cm-formatting-list {
+  color: var(--green);
+}
+ul ul ul ul ul li::marker,
+ol ol ol ol ol li::marker,
+.HyperMD-list-line-5 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-5 .cm-formatting-list {
+  color: var(--cyan);
+}
+ul ul ul ul ul ul li::marker,
+ol ol ol ol ol ol li::marker,
+.HyperMD-list-line-6 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-6 .cm-formatting-list {
+  color: var(--purple);
+}
