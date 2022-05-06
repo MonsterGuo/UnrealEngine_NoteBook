@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/4.0 Unreal Engine集成第三方库.md",
+            "file": "C++程序DLL相关基础/12.动态链接库.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/4.0 Unreal Engine集成第三方库.md",
+                "file": "C++程序DLL相关基础/12.动态链接库.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,19 +98,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 534
+    "width": 278
   },
   "active": "a757b915d0694b44",
   "lastOpenFiles": [
-    "笔记/4.0 Unreal Engine集成第三方库.md",
+    "C++程序DLL相关基础/12.动态链接库.md",
+    "C++程序DLL相关基础/7.一般规则和限制.md",
+    "C++程序DLL相关基础/8.在 C++ 类中使用 dllimport 和 dllexport.md",
+    "C++程序DLL相关基础/10.other.C++：LIB和DLL的区别与使用.md",
+    "C++程序DLL相关基础/11.静态链接库.md",
     "笔记/0.0 UnrealEngine.md",
-    "C++程序DLL相关基础/0. C++相关基础.md",
-    "C++程序DLL相关基础/1.演练：创建并使用静态库.md",
-    "C++程序DLL相关基础/2.在VisualStudio中生成C或者C++中创建DLL.md",
-    "C++程序DLL相关基础/3.演练：创建和使用自己的动态链接库 (C++).md",
-    "C++程序DLL相关基础/4. 关于dllexport、dllimport.md",
-    "C++程序DLL相关基础/5.定义和声明 (C++).md",
+    "笔记/3.0 SwitchBoard.md",
     "C++程序DLL相关基础/6.使用 dllexport 和 dllimport 定义内联 C++ 函数.md",
-    "C++程序DLL相关基础/7.一般规则和限制.md"
+    "C++程序DLL相关基础/4. 关于dllexport、dllimport.md",
+    "C++程序DLL相关基础/1.演练：创建并使用静态库.md"
   ]
 }
