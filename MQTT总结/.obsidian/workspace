@@ -1,0 +1,99 @@
+{
+  "main": {
+    "id": "6e353546c6d4e373",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e7b531c04e42cc0",
+        "type": "leaf",
+        "state": {
+          "type": "excalidraw",
+          "state": {
+            "file": "Excalidraw/Drawing 2022-06-14 10.21.43.excalidraw.md"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fe4fa85de35034a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "66590bd6c80dc786",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0490b317a1583bf9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "568a3346f6fec1d6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 323.01219177246094
+  },
+  "right": {
+    "id": "0f4ea4b8e965c0a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "87644cda525b9cc4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7edcc136cf3e8cca",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Excalidraw/Drawing 2022-06-14 10.21.43.excalidraw.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "7e7b531c04e42cc0",
+  "lastOpenFiles": [
+    "Excalidraw/Drawing 2022-06-14 10.21.43.excalidraw.md",
+    "Excalidraw/OSC插件的类型图.md",
+    "Excalidraw/MQTT插件框架.md",
+    "实现消息订阅的方式.md",
+    "MQTT 源码部分修改.md",
+    "Image/Pasted Image 20220604101849_191.png",
+    "Excalidraw/Drawing 2022-06-02 22.15.53.excalidraw.png",
+    "Image/Pasted Image 20220602225645_743.png"
+  ]
+}
