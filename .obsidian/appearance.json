@@ -1,7 +1,8 @@
 {
   "baseFontSize": 18,
   "theme": "obsidian",
-  "cssTheme": "Bubble Space",
+  "cssTheme": "Blue Topaz",
   "textFontFamily": "",
-  "translucency": false
+  "translucency": false,
+  "accentColor": ""
 }

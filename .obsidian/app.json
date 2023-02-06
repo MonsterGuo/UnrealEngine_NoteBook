@@ -2,7 +2,7 @@
   "legacyEditor": false,
   "livePreview": true,
   "promptDelete": false,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "attachmentFolderPath": "C++程序DLL相关基础/Image",
   "alwaysUpdateLinks": true
 }
