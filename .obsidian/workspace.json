@@ -8,48 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a757b915d0694b44",
+            "id": "89a7c8813db95184",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "虚幻网络模块单元，远程控制部分/1. 开始读RemoteControll.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f84313d92096b6ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C++中关于动态内存的管理.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c3e5ddf414f06532",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C++中关于动态内存的管理.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bdc58323c0d1a716",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "关于BuildGraph.md",
+                "file": "国密算法/不同密码概念.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -126,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "关于BuildGraph.md",
+                "file": "国密算法/不同密码概念.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,25 +123,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:Create new canvas": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bdc58323c0d1a716",
+  "active": "89a7c8813db95184",
   "lastOpenFiles": [
-    "C++中关于动态内存的管理.md",
+    "国密算法/国密算法GmSLL.md",
+    "关于BuildGraph.md",
     "内存泄漏.md",
+    "国密算法/不同密码概念.md",
+    "Windows 控制台命令.md",
+    "C++中关于动态内存的管理.md",
     "虚幻笔记2/UE4 选定启动的编辑器版本的问题.md",
     "Excalidraw/Drawing 2023-02-05 20.04.24.excalidraw.md",
     "Excalidraw/Drawing 2023-02-05 20.04.23.excalidraw.md",
-    "Excalidraw/Drawing 2023-02-05 20.04.21.excalidraw.md",
-    "C++程序DLL相关基础/3.演练：创建和使用自己的动态链接库 (C++).md",
-    "C++程序DLL相关基础/2.在VisualStudio中生成C或者C++中创建DLL.md",
-    "C++程序DLL相关基础/1.演练：创建并使用静态库.md",
-    "C++程序DLL相关基础/Image/Pasted image 20220430214848.png"
+    "Excalidraw/Drawing 2023-02-05 20.04.21.excalidraw.md"
   ]
 }
