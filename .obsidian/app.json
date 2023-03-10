@@ -3,6 +3,12 @@
   "livePreview": true,
   "promptDelete": false,
   "readableLineLength": false,
-  "attachmentFolderPath": "C++程序DLL相关基础/Image",
-  "alwaysUpdateLinks": true
+  "attachmentFolderPath": "DLSS版本的特性以及使用/图片",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

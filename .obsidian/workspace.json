@@ -4,47 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "93d33c2e879f75e7",
+        "id": "f466204da45c112c",
         "type": "tabs",
         "children": [
           {
-            "id": "dc2ebb2fa7ee6ac9",
+            "id": "c9ba8fb074e2e2b3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UE5基础学习/2.虚幻5的一些基础认识差异.md",
+                "file": "3.UE5基础学习/10.Niagara粒子系统学习.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "a29d34e8caf29296",
+            "id": "bb6c49c0c066eadd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UE5基础学习/5.虚幻提供给大平面的折射材质设置.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5df26505c9772cc7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UE5基础学习/材质图元操作.md",
+                "file": "DLSS版本的特性以及使用/1.关于DLSS的优势.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,7 +62,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
                 "extraContext": false,
@@ -102,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UE5基础学习/材质图元操作.md",
+                "file": "DLSS版本的特性以及使用/1.关于DLSS的优势.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,40 +142,52 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5df26505c9772cc7",
+  "active": "bb6c49c0c066eadd",
   "lastOpenFiles": [
-    "C++程序DLL相关基础/Image/Pasted image 20230302110411.png",
-    "C++程序DLL相关基础/Image/Pasted image 20230302110344.png",
-    "C++程序DLL相关基础/Image/Pasted image 20230302110254.png",
-    "C++程序DLL相关基础/Image/Pasted image 20230302105814.png",
-    "C++程序DLL相关基础/Image/Pasted image 20230302105724.png",
-    "C++程序DLL相关基础/Image/Pasted image 20230302105347.png",
-    "C++程序DLL相关基础/Image/Pasted image 20230302104758.png",
-    "C++程序DLL相关基础/Image/Pasted image 20230302104445.png",
-    "C++程序DLL相关基础/Image/Pasted image 20230302104214.jpg",
-    "C++程序DLL相关基础/Image/Pasted image 20230302104137.jpg",
-    "UE5基础学习/5.虚幻提供给大平面的折射材质设置.md",
-    "UE5基础学习/材质图元操作.md",
-    "UE5基础学习/4.Niagara 模块.md",
-    "UE5基础学习/3.Lumen光照.md",
-    "UE5基础学习/2.虚幻5的一些基础认识差异.md",
-    "UE5基础学习/1.了解world partition 的工作原理.md",
-    "C++程序DLL相关基础/Image/Pasted image 20230302095622.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230310144306.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230310144140.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230310143942.png",
+    "DLSS版本的特性以及使用/2.DLSS使用说明文档.md",
+    "DLSS版本的特性以及使用/1.关于DLSS的优势.md",
+    "DLSS版本的特性以及使用/4.NDR说明文档.md",
+    "DLSS版本的特性以及使用/3.NIS说明文档.md",
+    "DLSS版本的特性以及使用/Images/fbx-lightmapuvs.png",
+    "DLSS版本的特性以及使用/Images/emissive-surfaces2.png",
+    "DLSS版本的特性以及使用/Images/emissive-surfaces.png",
+    "DLSS版本的特性以及使用/Images/emissive_directlight.png",
+    "DLSS版本的特性以及使用/Images/editor-ddgi-volume.png",
+    "DLSS版本的特性以及使用/Images/direct-only.png",
+    "DLSS版本的特性以及使用/Images/direct+rtxgi+texture.png",
+    "DLSS版本的特性以及使用/Images/direct+rtxgi.png",
+    "DLSS版本的特性以及使用/5.RTXGI说明文档.md",
+    "DLSS版本的特性以及使用/README.md",
+    "DLSS版本的特性以及使用/Images",
+    "DLSS版本的特性以及使用/DLSS使用说明文档.md",
+    "DLSS版本的特性以及使用/图片",
+    "1.虚幻基础知识笔记/16.图形编程的一些概念/1.基础概念.md",
+    "DLSS版本的特性以及使用",
+    "2.C++知识库/4.类的前置声明.md",
+    "1.虚幻基础知识笔记/16.图形编程的一些概念",
+    "2.C++知识库/0.0 C++ 基础知识目录.md",
+    "2.C++知识库/3.Windows 控制台命令.md",
+    "2.C++知识库/1.内存泄漏.md",
+    "2.C++知识库/2.C++中关于动态内存的管理.md",
+    "C++程序DLL相关基础/13. 共享指针的优点.md",
+    "1.虚幻基础知识笔记/15.UE4宏定义冲突的解决办法.md",
+    "1.虚幻基础知识笔记/14.Ansel 插件的HDR问题.md",
+    "1.虚幻基础知识笔记/UE4宏定义冲突的解决办法： 1.md",
+    "1.虚幻基础知识笔记/13.关于BuildGraph.md",
+    "2.C++知识库",
+    "Excalidraw/Drawing 2023-02-05 20.04.23.excalidraw.md",
+    "3.UE5基础学习/0.0 UE5 知识目录.md",
+    "1.虚幻基础知识笔记/0 .基础笔记目录.md",
+    "国密算法/0.0 国密目录.md",
+    "3.UE5基础学习/10.Niagara粒子系统学习.md",
+    "MQTT物联网/实践笔记/0.MQTT实践.md",
+    "1.虚幻基础知识笔记/1.Ansel_Capture说明文档.md",
+    "3.UE5基础学习/图集",
     "未命名.canvas",
-    "Excalidraw/Drawing 2023-03-01 10.54.17.excalidraw.md",
-    "Excalidraw/Drawing 2023-03-01 10.54.15.excalidraw.md",
-    "虚幻笔记2/UE4 选定启动的编辑器版本的问题.md",
-    "国密算法/GMSSL的SM2部分代码（1）.md",
-    "国密算法/C语言fopen函数的用法，C语言打开文件详解.md",
-    "国密算法/私有密钥的Parse(解析).md",
-    "国密算法/使用SM2实现文件形式的加密和解密.md",
-    "国密算法/国密算法GmSLL.md",
-    "国密算法/不同密码概念.md",
-    "UE4宏定义冲突的解决办法：.md",
-    "UE5基础学习",
-    "编辑器插件记录/这个部分源码中带有解释.md",
-    "内存泄漏.md",
-    "Windows 控制台命令.md",
-    "关于BuildGraph.md"
+    "未命名 1.canvas",
+    "3.UE5基础学习"
   ]
 }
