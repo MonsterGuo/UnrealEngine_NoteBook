@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "f466204da45c112c",
+        "id": "efcea3a01762c568",
         "type": "tabs",
         "children": [
           {
-            "id": "c9ba8fb074e2e2b3",
+            "id": "970bb23a8d98d69f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.UE5基础学习/10.Niagara粒子系统学习.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bb6c49c0c066eadd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DLSS版本的特性以及使用/1.关于DLSS的优势.md",
+                "file": "DLSS版本的特性以及使用/1.关于DLSS版本的优势.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -62,7 +49,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
                 "extraContext": false,
@@ -74,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 428
+    "width": 257.5
   },
   "right": {
     "id": "b8054b965b0318bd",
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DLSS版本的特性以及使用/1.关于DLSS的优势.md",
+                "file": "DLSS版本的特性以及使用/1.关于DLSS版本的优势.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,36 +129,46 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bb6c49c0c066eadd",
+  "active": "970bb23a8d98d69f",
   "lastOpenFiles": [
+    "DLSS版本的特性以及使用/0.0 DLSS 版本目录.md",
+    "DLSS版本的特性以及使用/5.RTXGI说明文档.md",
+    "C++程序DLL相关基础/0. C++相关基础.md",
+    "DLSS版本的特性以及使用/2.DLSS使用说明文档.md",
+    "DLSS版本的特性以及使用/3.NIS说明文档.md",
+    "DLSS版本的特性以及使用/1.关于DLSS版本的优势.md",
+    "DLSS版本的特性以及使用/4.NDR说明文档.md",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230311195907.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230311195745.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230311195654.png",
+    "默认值为0.md",
+    "默认值=0.010000.md",
+    "2.C++知识库/0.1C++基础知识.canvas",
+    "2.C++知识库/C++基础知识 1.canvas",
+    "未命名 1.canvas",
+    "未命名 2.canvas",
+    "3.UE5基础学习/10.Niagara粒子系统学习.md",
+    "2.C++知识库/2.C++中关于动态内存的管理.md",
+    "2.C++知识库/3.Windows 控制台命令.md",
+    "2.C++知识库/4.类的前置声明.md",
+    "2.C++知识库/1.内存泄漏.md",
+    "2.C++知识库/0.0 C++ 基础知识目录.md",
+    "3.UE5基础学习/11.Niagara的FogSample示例学习.md",
+    "3.UE5基础学习/9.命令行.md",
     "DLSS版本的特性以及使用/图片/Pasted image 20230310144306.png",
     "DLSS版本的特性以及使用/图片/Pasted image 20230310144140.png",
     "DLSS版本的特性以及使用/图片/Pasted image 20230310143942.png",
-    "DLSS版本的特性以及使用/2.DLSS使用说明文档.md",
-    "DLSS版本的特性以及使用/1.关于DLSS的优势.md",
-    "DLSS版本的特性以及使用/4.NDR说明文档.md",
-    "DLSS版本的特性以及使用/3.NIS说明文档.md",
     "DLSS版本的特性以及使用/Images/fbx-lightmapuvs.png",
     "DLSS版本的特性以及使用/Images/emissive-surfaces2.png",
     "DLSS版本的特性以及使用/Images/emissive-surfaces.png",
     "DLSS版本的特性以及使用/Images/emissive_directlight.png",
-    "DLSS版本的特性以及使用/Images/editor-ddgi-volume.png",
-    "DLSS版本的特性以及使用/Images/direct-only.png",
-    "DLSS版本的特性以及使用/Images/direct+rtxgi+texture.png",
-    "DLSS版本的特性以及使用/Images/direct+rtxgi.png",
-    "DLSS版本的特性以及使用/5.RTXGI说明文档.md",
     "DLSS版本的特性以及使用/README.md",
     "DLSS版本的特性以及使用/Images",
     "DLSS版本的特性以及使用/DLSS使用说明文档.md",
     "DLSS版本的特性以及使用/图片",
     "1.虚幻基础知识笔记/16.图形编程的一些概念/1.基础概念.md",
     "DLSS版本的特性以及使用",
-    "2.C++知识库/4.类的前置声明.md",
     "1.虚幻基础知识笔记/16.图形编程的一些概念",
-    "2.C++知识库/0.0 C++ 基础知识目录.md",
-    "2.C++知识库/3.Windows 控制台命令.md",
-    "2.C++知识库/1.内存泄漏.md",
-    "2.C++知识库/2.C++中关于动态内存的管理.md",
     "C++程序DLL相关基础/13. 共享指针的优点.md",
     "1.虚幻基础知识笔记/15.UE4宏定义冲突的解决办法.md",
     "1.虚幻基础知识笔记/14.Ansel 插件的HDR问题.md",
@@ -179,15 +176,7 @@
     "1.虚幻基础知识笔记/13.关于BuildGraph.md",
     "2.C++知识库",
     "Excalidraw/Drawing 2023-02-05 20.04.23.excalidraw.md",
-    "3.UE5基础学习/0.0 UE5 知识目录.md",
-    "1.虚幻基础知识笔记/0 .基础笔记目录.md",
-    "国密算法/0.0 国密目录.md",
-    "3.UE5基础学习/10.Niagara粒子系统学习.md",
-    "MQTT物联网/实践笔记/0.MQTT实践.md",
-    "1.虚幻基础知识笔记/1.Ansel_Capture说明文档.md",
     "3.UE5基础学习/图集",
-    "未命名.canvas",
-    "未命名 1.canvas",
     "3.UE5基础学习"
   ]
 }
