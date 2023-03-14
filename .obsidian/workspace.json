@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "efcea3a01762c568",
+        "id": "cf03593a00cd87a8",
         "type": "tabs",
         "children": [
           {
-            "id": "970bb23a8d98d69f",
+            "id": "e100db9a2331ce36",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DLSS版本的特性以及使用/1.关于DLSS版本的优势.md",
+                "file": "DLSS版本的特性以及使用/2.DLSS使用说明文档.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "56a6b685ec99ad96",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2.C++知识库/C++ Comment  和 LoadLibraryW.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#启用和使用RTXDI增强功能",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -61,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 441.5
   },
   "right": {
     "id": "b8054b965b0318bd",
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DLSS版本的特性以及使用/1.关于DLSS版本的优势.md",
+                "file": "2.C++知识库/C++ Comment  和 LoadLibraryW.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,53 +142,55 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "970bb23a8d98d69f",
+  "active": "56a6b685ec99ad96",
   "lastOpenFiles": [
-    "DLSS版本的特性以及使用/0.0 DLSS 版本目录.md",
-    "DLSS版本的特性以及使用/5.RTXGI说明文档.md",
-    "C++程序DLL相关基础/0. C++相关基础.md",
     "DLSS版本的特性以及使用/2.DLSS使用说明文档.md",
-    "DLSS版本的特性以及使用/3.NIS说明文档.md",
+    "2.C++知识库/C++ Comment  和 LoadLibraryW.md",
     "DLSS版本的特性以及使用/1.关于DLSS版本的优势.md",
+    "DLSS版本的特性以及使用/0.0 DLSS 版本目录.md",
+    "DLSS版本的特性以及使用/0.1.DLSS版本4.27说明.md",
     "DLSS版本的特性以及使用/4.NDR说明文档.md",
+    "DLSS版本的特性以及使用/6.ReLAX说明文档.md",
+    "DLSS版本的特性以及使用/3.NIS说明文档.md",
+    "DLSS版本的特性以及使用/5.RTXGI说明文档（只有在4.27版本中延用了，但是应该是支持5.1的）.md",
+    "1.虚幻基础知识笔记/13.关于BuildGraph.md",
+    "1.虚幻基础知识笔记/12.关于一些类或者一些对象前面会有一个“模块名_API”或者“项目名_API”.md",
+    "1.虚幻基础知识笔记/14.Ansel 插件的HDR问题.md",
+    "1.虚幻基础知识笔记/15.UE4宏定义冲突的解决办法.md",
+    "2.C++知识库/0.0 C++ 基础知识目录.md",
+    "2.C++知识库/0.1C++基础知识.canvas",
+    "2.C++知识库/1.内存泄漏.md",
+    "2.C++知识库/2.C++中关于动态内存的管理.md",
+    "2.C++知识库/4.类的前置声明.md",
+    "2.C++知识库/3.Windows 控制台命令.md",
+    "3.UE5基础学习/10.Niagara粒子系统学习.md",
+    "3.UE5基础学习/9.命令行.md",
+    "3.UE5基础学习/8.UE5 GPU崩溃的解决办法.md",
+    "3.UE5基础学习/7.Niagara的参数面板.md",
+    "3.UE5基础学习/5.虚幻提供给大平面的折射材质设置.md",
+    "3.UE5基础学习/4.Niagara 模块.md",
+    "3.UE5基础学习/3.Lumen光照.md",
+    "3.UE5基础学习/2.虚幻5的一些基础认识差异.md",
+    "Docs/RTXDI",
+    "Docs",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230312164705.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230312164419.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230312163613.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230312163521.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230312162448.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230312155212.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230312155103.png",
+    "DLSS版本的特性以及使用/图片/Pastedimage20230310113534.png",
     "DLSS版本的特性以及使用/图片/Pasted image 20230311195907.png",
     "DLSS版本的特性以及使用/图片/Pasted image 20230311195745.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230311195654.png",
-    "默认值为0.md",
-    "默认值=0.010000.md",
-    "2.C++知识库/0.1C++基础知识.canvas",
     "2.C++知识库/C++基础知识 1.canvas",
     "未命名 1.canvas",
     "未命名 2.canvas",
-    "3.UE5基础学习/10.Niagara粒子系统学习.md",
-    "2.C++知识库/2.C++中关于动态内存的管理.md",
-    "2.C++知识库/3.Windows 控制台命令.md",
-    "2.C++知识库/4.类的前置声明.md",
-    "2.C++知识库/1.内存泄漏.md",
-    "2.C++知识库/0.0 C++ 基础知识目录.md",
-    "3.UE5基础学习/11.Niagara的FogSample示例学习.md",
-    "3.UE5基础学习/9.命令行.md",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230310144306.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230310144140.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230310143942.png",
-    "DLSS版本的特性以及使用/Images/fbx-lightmapuvs.png",
-    "DLSS版本的特性以及使用/Images/emissive-surfaces2.png",
-    "DLSS版本的特性以及使用/Images/emissive-surfaces.png",
-    "DLSS版本的特性以及使用/Images/emissive_directlight.png",
-    "DLSS版本的特性以及使用/README.md",
     "DLSS版本的特性以及使用/Images",
-    "DLSS版本的特性以及使用/DLSS使用说明文档.md",
     "DLSS版本的特性以及使用/图片",
-    "1.虚幻基础知识笔记/16.图形编程的一些概念/1.基础概念.md",
     "DLSS版本的特性以及使用",
     "1.虚幻基础知识笔记/16.图形编程的一些概念",
-    "C++程序DLL相关基础/13. 共享指针的优点.md",
-    "1.虚幻基础知识笔记/15.UE4宏定义冲突的解决办法.md",
-    "1.虚幻基础知识笔记/14.Ansel 插件的HDR问题.md",
-    "1.虚幻基础知识笔记/UE4宏定义冲突的解决办法： 1.md",
-    "1.虚幻基础知识笔记/13.关于BuildGraph.md",
     "2.C++知识库",
-    "Excalidraw/Drawing 2023-02-05 20.04.23.excalidraw.md",
     "3.UE5基础学习/图集",
     "3.UE5基础学习"
   ]
