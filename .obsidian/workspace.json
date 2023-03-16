@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DLSS版本的特性以及使用/2.DLSS使用说明文档.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "56a6b685ec99ad96",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2.C++知识库/C++ Comment  和 LoadLibraryW.md",
+                "file": "MQTT总结/MQTT 源码部分修改.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#启用和使用RTXDI增强功能",
+                "query": "tag:#示例代码2",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -74,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 441.5
+    "width": 343.5
   },
   "right": {
     "id": "b8054b965b0318bd",
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.C++知识库/C++ Comment  和 LoadLibraryW.md",
+                "file": "MQTT总结/MQTT 源码部分修改.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,47 +129,47 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "56a6b685ec99ad96",
+  "active": "e100db9a2331ce36",
   "lastOpenFiles": [
-    "DLSS版本的特性以及使用/2.DLSS使用说明文档.md",
+    "MQTT总结/实现消息订阅的方式.md",
+    "MQTT物联网/MQTT知识补充/3.MQTT 本地borker.md",
+    "MQTT物联网/MQTT知识补充/2.MQTT 保留消息.md",
+    "MQTT物联网/MQTT知识补充/1.如何使用 MQTT 报文实现发布订阅功能.md",
+    "MQTT物联网/MQTT知识补充/0.MQTT补充笔记目录.md",
+    "MQTT物联网/MQTT 插件笔记/插件的第三方库引用.md",
+    "国密算法/GMSSL的SM2部分代码（1）.md",
+    "国密算法/C语言fopen函数的用法，C语言打开文件详解.md",
+    "国密算法/私有密钥的Parse(解析).md",
+    "国密算法/使用SM2实现文件形式的加密和解密.md",
+    "国密算法/国密算法GmSLL.md",
+    "国密算法/不同密码概念.md",
+    "国密算法/0.0 国密目录.md",
+    "编辑器插件记录/这个部分源码中带有解释.md",
+    "Docs/RTXDI/README.md",
+    "RTX.md",
+    "Excalidraw/Drawing 2023-03-01 10.54.17.excalidraw.md",
+    "Excalidraw/Drawing 2023-03-01 10.54.15.excalidraw.md",
+    "Excalidraw/Drawing 2023-02-05 20.04.24.excalidraw.md",
+    "Excalidraw/Drawing 2023-02-05 20.04.23.excalidraw.md",
+    "Excalidraw/Drawing 2023-02-05 20.04.21.excalidraw.md",
+    "3.UE5基础学习/0.0 UE5 知识目录.md",
+    "MQTT物联网/MQTT 插件文档.md",
+    "DLSS版本的特性以及使用/图片/BPGraphScreenshot2.png",
+    "DLSS版本的特性以及使用/图片/BPGraphScreenshot.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230316084957.png",
+    "DLSS版本的特性以及使用/图片/AllNodes_Scr.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230316084649.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230316084432.png",
+    "虚幻编程笔记/UE4 原子操作与无锁编程.md",
     "2.C++知识库/C++ Comment  和 LoadLibraryW.md",
-    "DLSS版本的特性以及使用/1.关于DLSS版本的优势.md",
-    "DLSS版本的特性以及使用/0.0 DLSS 版本目录.md",
-    "DLSS版本的特性以及使用/0.1.DLSS版本4.27说明.md",
-    "DLSS版本的特性以及使用/4.NDR说明文档.md",
     "DLSS版本的特性以及使用/6.ReLAX说明文档.md",
-    "DLSS版本的特性以及使用/3.NIS说明文档.md",
-    "DLSS版本的特性以及使用/5.RTXGI说明文档（只有在4.27版本中延用了，但是应该是支持5.1的）.md",
-    "1.虚幻基础知识笔记/13.关于BuildGraph.md",
-    "1.虚幻基础知识笔记/12.关于一些类或者一些对象前面会有一个“模块名_API”或者“项目名_API”.md",
-    "1.虚幻基础知识笔记/14.Ansel 插件的HDR问题.md",
-    "1.虚幻基础知识笔记/15.UE4宏定义冲突的解决办法.md",
-    "2.C++知识库/0.0 C++ 基础知识目录.md",
     "2.C++知识库/0.1C++基础知识.canvas",
-    "2.C++知识库/1.内存泄漏.md",
-    "2.C++知识库/2.C++中关于动态内存的管理.md",
-    "2.C++知识库/4.类的前置声明.md",
-    "2.C++知识库/3.Windows 控制台命令.md",
-    "3.UE5基础学习/10.Niagara粒子系统学习.md",
-    "3.UE5基础学习/9.命令行.md",
-    "3.UE5基础学习/8.UE5 GPU崩溃的解决办法.md",
-    "3.UE5基础学习/7.Niagara的参数面板.md",
-    "3.UE5基础学习/5.虚幻提供给大平面的折射材质设置.md",
-    "3.UE5基础学习/4.Niagara 模块.md",
-    "3.UE5基础学习/3.Lumen光照.md",
-    "3.UE5基础学习/2.虚幻5的一些基础认识差异.md",
     "Docs/RTXDI",
     "Docs",
     "DLSS版本的特性以及使用/图片/Pasted image 20230312164705.png",
     "DLSS版本的特性以及使用/图片/Pasted image 20230312164419.png",
     "DLSS版本的特性以及使用/图片/Pasted image 20230312163613.png",
     "DLSS版本的特性以及使用/图片/Pasted image 20230312163521.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230312162448.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230312155212.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230312155103.png",
-    "DLSS版本的特性以及使用/图片/Pastedimage20230310113534.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230311195907.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230311195745.png",
     "2.C++知识库/C++基础知识 1.canvas",
     "未命名 1.canvas",
     "未命名 2.canvas",
