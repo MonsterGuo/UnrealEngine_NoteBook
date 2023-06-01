@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "b143733b367d6236",
+        "id": "4af8059dfc030bdd",
         "type": "tabs",
         "children": [
           {
-            "id": "a6df3e95087b88cb",
+            "id": "f38e993e27741223",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "1.虚幻基础知识笔记/22. UFunction函数说明符和元详解.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8e8a8dc5e3804e7c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1.虚幻基础知识笔记/19. Common.h文件的一般作用.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "1.虚幻基础知识笔记/19. Common.h文件的一般作用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,8 +150,32 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9589a7bbe1ce473f",
+  "active": "8e8a8dc5e3804e7c",
   "lastOpenFiles": [
+    "1.虚幻基础知识笔记/20.  TSubclassof与UClass的差别.md",
+    "1.虚幻基础知识笔记/21 .Unreal engine 中Check、verify 、Ensure的区别.md",
+    "1.虚幻基础知识笔记/23. 虚幻中的类和类型定义.md",
+    "全景插件的部分解释/2.全景混合代码.md",
+    "国密算法/GMSSL的SM2部分代码（1）.md",
+    "国密算法/C语言fopen函数的用法，C语言打开文件详解.md",
+    "国密算法/使用SM2实现文件形式的加密和解密.md",
+    "全景插件的部分解释/1.双线性获取一个像素的颜色值.md",
+    "全景插件的部分解释",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230512102738.png",
+    "1.虚幻基础知识笔记/22. UFunction函数说明符和元详解.md",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511174214.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511172620.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511171646.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511171331.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511171142.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511164021.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511162953.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511160439.png",
+    "DLSS版本的特性以及使用/图片/Pasted image 20230511142621.png",
+    "Pasted image 20230511091846.pn.md",
+    "2.C++知识库/09. 多态与非多态的差异性，它们之间的差异在哪里？.md",
+    "1.虚幻基础知识笔记/19. Common.h文件的一般作用.md",
+    "1.虚幻基础知识笔记/未命名",
     "Xmind/虚幻的媒体播放器插件（wmfmediaplayer参照）.xmind",
     "Xmind",
     "新建文件夹",
@@ -147,42 +189,18 @@
     "2.C++知识库/03.Windows 控制台命令.md",
     "2.C++知识库/04.类的前置声明.md",
     "2.C++知识库/06. C++中成员函数尾部加override.md",
-    "1.虚幻基础知识笔记/19. Common.h文件的一般作用.md",
     "1.虚幻基础知识笔记/16.build.cs中关于私有依赖的作用.md",
     "1.虚幻基础知识笔记/17.UCLASS宏的意义.md",
     "1.虚幻基础知识笔记/18.什么是虚幻的序列化？.md",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230508154702.png",
     "1.虚幻基础知识笔记/10.虚幻在插件中添加第三方库的实际操作.md",
     "1.虚幻基础知识笔记/14.Ansel 插件的HDR问题.md",
-    "MQTT总结/MQTT 源码部分修改.md",
-    "MQTT总结/实现消息订阅的方式.md",
-    "MQTT物联网/MQTT知识补充/3.MQTT 本地borker.md",
-    "MQTT物联网/MQTT知识补充/2.MQTT 保留消息.md",
-    "MQTT物联网/MQTT知识补充/1.如何使用 MQTT 报文实现发布订阅功能.md",
-    "MQTT物联网/MQTT知识补充/0.MQTT补充笔记目录.md",
-    "MQTT物联网/MQTT 插件笔记/插件的第三方库引用.md",
-    "国密算法/GMSSL的SM2部分代码（1）.md",
-    "国密算法/C语言fopen函数的用法，C语言打开文件详解.md",
-    "国密算法/私有密钥的Parse(解析).md",
-    "DLSS版本的特性以及使用/图片/BPGraphScreenshot2.png",
-    "DLSS版本的特性以及使用/图片/BPGraphScreenshot.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230316084957.png",
-    "DLSS版本的特性以及使用/图片/AllNodes_Scr.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230316084649.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230316084432.png",
     "Docs/RTXDI",
     "Docs",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230312164705.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230312164419.png",
-    "DLSS版本的特性以及使用/图片/Pasted image 20230312163613.png",
     "2.C++知识库/C++基础知识 1.canvas",
     "未命名 1.canvas",
     "未命名 2.canvas",
     "DLSS版本的特性以及使用/Images",
     "DLSS版本的特性以及使用/图片",
-    "DLSS版本的特性以及使用",
-    "1.虚幻基础知识笔记/16.图形编程的一些概念",
-    "2.C++知识库",
-    "3.UE5基础学习/图集"
+    "DLSS版本的特性以及使用"
   ]
 }

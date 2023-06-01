@@ -6,7 +6,7 @@
   "attachmentFolderPath": "DLSS版本的特性以及使用/图片",
   "alwaysUpdateLinks": true,
   "pdfExportSettings": {
-    "pageSize": "Letter",
+    "pageSize": "A4",
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100
